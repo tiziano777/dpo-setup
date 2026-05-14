@@ -1,0 +1,64 @@
+model:
+  model_id:
+  cache_dir: .cache
+  cache_file: dpo_train_data.jsonl
+  torch_dtype: bfloat16
+  device_map: auto
+  training:
+    per_device_train_batch_size: 1
+    gradient_accumulation_steps: 8
+    num_train_epochs: 1
+    logging_steps: 10
+    bf16: true
+    remove_unused_columns: true
+  templates_mapping: modules/templates/chat_type_mapping.yml
+  temperature: 0.7
+
+
+recipe: 
+  recipe_id: 
+  recipe_name: 
+  description: 
+  scope: 
+  tasks: 
+  tags: 
+  derived_from: 
+  entries:
+    <dist_uri_1>: 
+      chat_type: 
+      dist_id: 
+      dist_name: 
+      dist_uri: 
+      replica: 
+      samples: 
+      system_prompt: 
+      system_prompt_name: 
+      tokens: 
+      words: 
+      validation_error:
+    <dist_uri_2>: 
+      chat_type: 
+      dist_id: 
+      dist_name: 
+      dist_uri: 
+      replica: 
+      samples: 
+      system_prompt: 
+      system_prompt_name: 
+      tokens: 
+      words: 
+      validation_error:
+     
+output: 
+  output_dir: 
+  metrics_uri:
+
+hardware: 
+  gpu: 
+    type: 
+    count: 
+  cpu: 
+    type: 
+    count: 
+  memory: 
+    size:
