@@ -39,6 +39,7 @@
     },
     "_source_uri": { "type": "string" },
     "_replica": { "type": "integer" },
-    "_system_prompt_id": { "type": "string" }
+    "_system_prompt_id": { "type": "string" },
+    "_id_hash":{"type": "string","pattern": "^[a-fA-F0-9]{64}$"}
   }
 }

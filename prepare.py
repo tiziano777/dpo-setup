@@ -61,6 +61,8 @@ def prepare(
                         processed["_source_uri"] = uri
                         processed["_replica"] = rep
                         processed["_system_prompt_id"] = prompt_id
+                        # Include _id_hash from the original sample when available
+                        processed["_id_hash"] = sample_copy.get("_id_hash", processed.get("_id_hash"))
                         all_samples.append(processed)
                     except (ValueError, KeyError) as e:
                         logger.warning("  Skipping sample: %s", e)
