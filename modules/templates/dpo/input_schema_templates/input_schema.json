@@ -54,7 +54,7 @@
               }
             }
           },
-          "additionalProperties": false
+          "additionalProperties": true
         },
         "then": {
           "required": [
@@ -75,7 +75,7 @@
               ]
             }
           },
-          "additionalProperties": false
+          "additionalProperties": true
         },
         "type": "object",
         "required": [
